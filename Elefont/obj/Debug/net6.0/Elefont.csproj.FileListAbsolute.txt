@@ -1,0 +1,12 @@
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/bin/Debug/net6.0/Elefont.deps.json
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/bin/Debug/net6.0/Elefont.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/bin/Debug/net6.0/Elefont.pdb
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.csproj.AssemblyReference.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.AssemblyInfoInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.AssemblyInfo.cs
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.csproj.CoreCompileInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/refint/Elefont.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/Elefont.pdb
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/Debug/net6.0/ref/Elefont.dll

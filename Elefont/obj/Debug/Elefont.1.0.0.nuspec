@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Elefont</id>
+    <version>1.0.0</version>
+    <authors>Elefont</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Npgsql" version="6.0.6" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/bin/Debug/net6.0/Elefont.dll" target="lib/net6.0/Elefont.dll" />
+  </files>
+</package>

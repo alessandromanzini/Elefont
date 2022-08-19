@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vT/xgvTgxqMcZ6tzJY9IbCy9oFYYGzaQOzrmoApAfIx+fF4Iopx+v4sM/QiFLXhzELmmQ0ihjJq+lDw+2crrpA==",
+  "success": true,
+  "projectFilePath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
+  "expectedPackageFiles": [
+    "/Users/alessandromanzini/.nuget/packages/npgsql/6.0.6/npgsql.6.0.6.nupkg.sha512",
+    "/Users/alessandromanzini/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
