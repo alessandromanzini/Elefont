@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
-        "projectName": "Elefont",
+        "projectName": "alessandromanzini.Util.Elefont",
         "projectPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
         "packagesPath": "/Users/alessandromanzini/.nuget/packages/",
         "outputPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/obj/",
