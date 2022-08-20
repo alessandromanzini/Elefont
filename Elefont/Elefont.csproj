@@ -1,19 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Title>Elefont</Title>
         <PackageId>alessandromanzini.Util.Elefont</PackageId>
+        <Version>1.0.1</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>Npgsql, PostgreSQL, Herokupostgres</PackageTags>
+        <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
     </PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>

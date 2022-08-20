@@ -1,19 +1,24 @@
 ﻿<Properties>
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/Elefont.csproj">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/DatabaseConnection.cs">
     <Files>
       <File FileName="Elefont/DatabasePrototyper.cs" Line="57" Column="36" />
       <File FileName="Elefont/DatabaseConnection.cs" Line="15" Column="2" />
       <File FileName="Elefont/CSQL.cs" Line="56" Column="44" />
       <File FileName="Elefont/Models/QueryParameterModel.cs" Line="20" Column="14" />
-      <File FileName="Elefont/Elefont.csproj" Line="7" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Elefont" expanded="True">
-            <Node name="Elefont" expanded="True" selected="True">
+            <Node name="Elefont" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Exceptions" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -26,10 +31,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Debugger.DebugSourceFolders />
 </Properties>
