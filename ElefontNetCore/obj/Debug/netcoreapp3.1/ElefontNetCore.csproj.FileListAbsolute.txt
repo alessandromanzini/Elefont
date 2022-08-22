@@ -1,0 +1,10 @@
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.csproj.AssemblyReference.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.AssemblyInfoInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.AssemblyInfo.cs
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.csproj.CoreCompileInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/bin/Debug/netcoreapp3.1/ElefontNetCore.deps.json
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/bin/Debug/netcoreapp3.1/ElefontNetCore.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/bin/Debug/netcoreapp3.1/ElefontNetCore.pdb
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/Debug/netcoreapp3.1/ElefontNetCore.pdb
