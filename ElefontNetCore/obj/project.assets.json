@@ -9,14 +9,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Npgsql.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp3.1/Npgsql.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/Npgsql.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp3.1/Npgsql.dll": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
@@ -26,14 +22,10 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
@@ -51,14 +43,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
@@ -175,9 +163,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj",
+      "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj",
       "projectName": "alessandromanzini.Util.ElefontNETCore",
-      "projectPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj",
+      "projectPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj",
       "packagesPath": "/Users/alessandromanzini/.nuget/packages/",
       "outputPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/",
       "projectStyle": "PackageReference",
@@ -188,6 +176,7 @@
         "netcoreapp3.1"
       ],
       "sources": {
+        "/Users/alessandromanzini/Projects/dotnet/nugets": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

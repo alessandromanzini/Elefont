@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>alessandromanzini.Util.ElefontNETCore</id>
+    <version>1.0.0</version>
+    <title>Elefont</title>
+    <authors>alessandromanzini</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>A library to help with PostgreSQL development in C#</description>
+    <tags>Npgsql, PostgreSQL, Herokupostgres</tags>
+    <repository url="https://github.com/alessandromanzini/Elefont" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Npgsql" version="6.0.6" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/bin/Debug/netstandard2.1/ElefontNetCore.dll" target="lib/netstandard2.1/ElefontNetCore.dll" />
+  </files>
+</package>

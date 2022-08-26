@@ -4,13 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <Title>Elefont</Title>
         <PackageId>alessandromanzini.Util.Elefont</PackageId>
-        <Version>1.0.1</Version>
+        <Version>1.0.7</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>Npgsql, PostgreSQL, Herokupostgres</PackageTags>
         <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
+        <AssemblyName>Elefont</AssemblyName>
+        <PackageReleaseNotes>
+            Double type implemented
+        </PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup>

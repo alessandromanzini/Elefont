@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Title>Elefont</Title>
+        <PackageId>alessandromanzini.Util.ElefontNETStandard</PackageId>
+        <Version>1.0.6</Version>
+        <Authors>alessandromanzini</Authors>
+        <Company>Manzini Dal 1938 Srl</Company>
+        <Description>A library to help with PostgreSQL development in C#</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Npgsql, PostgreSQL, Herokupostgres</PackageTags>
+        <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
+        <AssemblyName>ElefontNETStandard</AssemblyName>
+        <PackageReleaseNotes>
+            Double type implemented
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Exceptions\" />
+      <None Remove="Models\" />
+      <None Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Exceptions\" />
+      <Folder Include="Models\" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Npgsql" Version="6.0.6" />
+    </ItemGroup>
+</Project>

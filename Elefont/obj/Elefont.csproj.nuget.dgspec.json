@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.7",
       "restore": {
         "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
         "projectName": "alessandromanzini.Util.Elefont",
@@ -20,6 +20,7 @@
           "net6.0"
         ],
         "sources": {
+          "/Users/alessandromanzini/Projects/dotnet/nugets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

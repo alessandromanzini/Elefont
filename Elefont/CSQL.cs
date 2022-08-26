@@ -10,7 +10,7 @@ namespace Elefont
     /// </summary>
     public class CSQL
     {
-        public static readonly string DB_DateFormat = "yyyy/MM/dd";
+        public static readonly string DB_DateFormat = "yyyy-MM-dd";
         public static readonly string NULL_VALUE = "NULL";
         public static readonly string DEFAULT_VALUE = "default";
         private string _sql;
@@ -46,6 +46,8 @@ namespace Elefont
 
             if (type == typeof(Int32))
                 return wrap(param.ToString());
+            if (type == typeof(Double))
+                return wrap(param.ToString().Replace(",", "."));
             if (type == typeof(string))
             {
                 if (Statements.Contains(param.ToString()))
@@ -89,16 +91,22 @@ namespace Elefont
             return sql;
         }
 
-        /// <summary>
-        /// Posts the query and waits for the estraction.
-        /// </summary>
-        /// <param name="connection"></param>
-        public void Post(DatabaseConnection connection)
+        private void PostToConnection(DatabaseConnection connection)
         {
             Sql += ";";
             Connection = connection;
             Connection.Post();
             Reader = new NpgsqlCommand(Sql, connection.Connection).ExecuteReader();
+        }
+
+        /// <summary>
+        /// Posts the query and closes the connection.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void Post(DatabaseConnection connection)
+        {
+            PostToConnection(connection);
+            Close();
         }
 
         /// <summary>
@@ -108,24 +116,24 @@ namespace Elefont
         /// <param name="action">Action with the query's response.</param>
         public void Post(DatabaseConnection connection, Action<CSQL> action)
         {
-            Post(connection);
+            PostToConnection(connection);
             action.Invoke(this);
             Close();
         }
 
-        internal bool Read()
+        public bool Read()
         {
             return Reader.Read();
         }
 
-        internal async Task CloseAsync()
+        public async Task CloseAsync()
         {
             Connection.Dispose();
             await Reader.DisposeAsync();
             Reader.Close();
         }
 
-        internal void Close()
+        public void Close()
         {
             CloseAsync().Wait();
         }
@@ -147,6 +155,18 @@ namespace Elefont
             if (IsDBNull(index))
                 return null;
             return GetInt32(index);
+        }
+
+        public double GetDouble(int index)
+        {
+            return Reader.GetDouble(index);
+        }
+
+        public double? GetNullableDouble(int index)
+        {
+            if (IsDBNull(index))
+                return null;
+            return GetDouble(index);
         }
 
         public string GetString(int index)

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ElefontNERCore
+build_property.ProjectDir = /Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/

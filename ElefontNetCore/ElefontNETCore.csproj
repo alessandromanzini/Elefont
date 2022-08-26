@@ -11,6 +11,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>Npgsql, PostgreSQL, Herokupostgres</PackageTags>
         <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
+        <AssemblyName>ElefontNetCore</AssemblyName>
     </PropertyGroup>
 
   <ItemGroup>

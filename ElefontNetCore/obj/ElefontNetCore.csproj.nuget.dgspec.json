@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj": {}
+    "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj": {}
   },
   "projects": {
-    "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj": {
+    "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj",
+        "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj",
         "projectName": "alessandromanzini.Util.ElefontNETCore",
-        "projectPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNetCore.csproj",
+        "projectPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/ElefontNETCore.csproj",
         "packagesPath": "/Users/alessandromanzini/.nuget/packages/",
         "outputPath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNetCore/obj/",
         "projectStyle": "PackageReference",
@@ -20,6 +20,7 @@
           "netcoreapp3.1"
         ],
         "sources": {
+          "/Users/alessandromanzini/Projects/dotnet/nugets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

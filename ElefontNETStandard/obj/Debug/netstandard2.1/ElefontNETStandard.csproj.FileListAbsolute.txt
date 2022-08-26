@@ -1,0 +1,10 @@
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.csproj.AssemblyReference.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.AssemblyInfoInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.AssemblyInfo.cs
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.csproj.CoreCompileInputs.cache
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/bin/Debug/netstandard2.1/ElefontNETStandard.deps.json
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/bin/Debug/netstandard2.1/ElefontNETStandard.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/bin/Debug/netstandard2.1/ElefontNETStandard.pdb
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.dll
+/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/obj/Debug/netstandard2.1/ElefontNETStandard.pdb
