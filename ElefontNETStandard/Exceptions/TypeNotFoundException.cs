@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Elefont.Exceptions
+namespace ElefontNETStandard.Exceptions
 {
     public class TypeNotFoundException : Exception
     {

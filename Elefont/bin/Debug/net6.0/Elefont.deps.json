@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Elefont/1.0.7": {
+      "Elefont/2.0.0": {
         "dependencies": {
           "Npgsql": "6.0.6"
         },
@@ -29,7 +29,7 @@
     }
   },
   "libraries": {
-    "Elefont/1.0.7": {
+    "Elefont/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

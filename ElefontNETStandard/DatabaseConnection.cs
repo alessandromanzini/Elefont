@@ -1,10 +1,10 @@
 ﻿using System;
 using Npgsql;
 
-namespace Elefont
+namespace ElefontNETStandard
 {
     /// <summary>
-    /// Database connection to a postgress db.
+    /// Database connection to a npgsql db.
     /// </summary>
     public class DatabaseConnection : IDisposable
     {

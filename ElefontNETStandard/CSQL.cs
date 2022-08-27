@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Elefont.Exceptions;
-using Elefont.Models;
+using ElefontNETStandard.Exceptions;
+using ElefontNETStandard.Models;
 using Npgsql;
 
-namespace Elefont
+namespace ElefontNETStandard
 {
     /// <summary>
     /// Class that helps formulating a query and posting it to a Npgsql connection.
@@ -93,7 +93,7 @@ namespace Elefont
             return sql;
         }
 
-        private void PostToConnection(DatabaseConnection connection)
+        internal void PostToConnection(DatabaseConnection connection)
         {
             Sql += ";";
             Connection = connection;
@@ -119,11 +119,14 @@ namespace Elefont
         public void Post(DatabaseConnection connection, Action<CSQL> action)
         {
             PostToConnection(connection);
-            action.Invoke(this);
+            while (Read())
+            {
+                action.Invoke(this);
+            }
             Close();
         }
 
-        public bool Read()
+        internal bool Read()
         {
             return Reader.Read();
         }
@@ -135,12 +138,12 @@ namespace Elefont
             Reader.Close();
         }
 
-        public void Close()
+        internal void Close()
         {
             CloseAsync().Wait();
         }
 
-        public bool IsDBNull(int index)
+        internal bool IsDBNull(int index)
         {
             if (Reader.IsDBNull(index))
                 return true;

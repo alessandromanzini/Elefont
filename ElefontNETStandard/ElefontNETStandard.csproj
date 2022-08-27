@@ -3,7 +3,7 @@
         <TargetFramework>netstandard2.1</TargetFramework>
         <Title>Elefont</Title>
         <PackageId>alessandromanzini.Util.ElefontNETStandard</PackageId>
-        <Version>1.0.6</Version>
+        <Version>2.0.0</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
@@ -12,7 +12,8 @@
         <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
         <AssemblyName>ElefontNETStandard</AssemblyName>
         <PackageReleaseNotes>
-            Double type implemented
+            IQueryResponse interface implemented for Post callbacks.
+            No more looping to retrieve data from db's response.
         </PackageReleaseNotes>
     </PropertyGroup>
 

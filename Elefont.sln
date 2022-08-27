@@ -5,8 +5,6 @@ VisualStudioVersion = 25.0.1703.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elefont", "Elefont\Elefont.csproj", "{39F63816-391D-4939-B6A0-AE7BFB60A946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElefontNETCore", "ElefontNetCore\ElefontNETCore.csproj", "{8C2B21AC-85CE-48F5-A3AC-B4F109ABA96D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElefontNETStandard", "ElefontNETStandard\ElefontNETStandard.csproj", "{B894B911-2AFC-45E3-8A36-F86821264758}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{39F63816-391D-4939-B6A0-AE7BFB60A946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F63816-391D-4939-B6A0-AE7BFB60A946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F63816-391D-4939-B6A0-AE7BFB60A946}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C2B21AC-85CE-48F5-A3AC-B4F109ABA96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C2B21AC-85CE-48F5-A3AC-B4F109ABA96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C2B21AC-85CE-48F5-A3AC-B4F109ABA96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C2B21AC-85CE-48F5-A3AC-B4F109ABA96D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B894B911-2AFC-45E3-8A36-F86821264758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B894B911-2AFC-45E3-8A36-F86821264758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B894B911-2AFC-45E3-8A36-F86821264758}.Release|Any CPU.ActiveCfg = Release|Any CPU

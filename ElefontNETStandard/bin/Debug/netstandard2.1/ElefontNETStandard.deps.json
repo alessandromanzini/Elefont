@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "ElefontNETStandard/1.0.6": {
+      "ElefontNETStandard/2.0.0": {
         "dependencies": {
           "Npgsql": "6.0.6"
         },
@@ -151,7 +151,7 @@
     }
   },
   "libraries": {
-    "ElefontNETStandard/1.0.6": {
+    "ElefontNETStandard/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

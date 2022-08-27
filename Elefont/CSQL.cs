@@ -8,7 +8,7 @@ namespace Elefont
     /// <summary>
     /// Class that helps formulating a query and posting it to a Npgsql connection.
     /// </summary>
-    public class CSQL
+    public class CSQL : IQueryResponse
     {
         public static readonly string DB_DateFormat = "yyyy-MM-dd";
         public static readonly string NULL_VALUE = "NULL";
@@ -91,7 +91,11 @@ namespace Elefont
             return sql;
         }
 
-        private void PostToConnection(DatabaseConnection connection)
+        /// <summary>
+        /// Posts the query and leaves it opened.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void PostToConnection(DatabaseConnection connection)
         {
             Sql += ";";
             Connection = connection;
@@ -114,10 +118,13 @@ namespace Elefont
         /// </summary>
         /// <param name="connection"></param>
         /// <param name="action">Action with the query's response.</param>
-        public void Post(DatabaseConnection connection, Action<CSQL> action)
+        public void Post(DatabaseConnection connection, Action<IQueryResponse> action)
         {
             PostToConnection(connection);
-            action.Invoke(this);
+            while (Read())
+            {
+                action.Invoke(this);
+            }
             Close();
         }
 

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Elefont
+namespace ElefontNETStandard
 {
     public class DatabasePrototyper
     {

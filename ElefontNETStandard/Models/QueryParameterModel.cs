@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Elefont.Models
+namespace ElefontNETStandard.Models
 {
     class QueryParameterModel
     {
