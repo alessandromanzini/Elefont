@@ -1,7 +1,7 @@
 ﻿using System;
 using Npgsql;
 
-namespace Elefont
+namespace Elefont.Helpers
 {
     /// <summary>
     /// Database connection to a postgress db.

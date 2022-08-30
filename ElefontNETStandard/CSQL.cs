@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ElefontNETStandard.Exceptions;
+using ElefontNETStandard.Helpers;
 using ElefontNETStandard.Models;
 using Npgsql;
 
@@ -12,14 +13,14 @@ namespace ElefontNETStandard
     /// </summary>
     public class CSQL
     {
-        public static readonly string DB_DateFormat = "yyyy/MM/dd";
+        public static readonly string UNI_DATEFORMAT = "yyyy-MM-dd";
         public static readonly string NULL_VALUE = "NULL";
         public static readonly string DEFAULT_VALUE = "default";
         private string _sql;
         protected string Sql
         {
             get => _sql;
-            set => _sql = value + (string.IsNullOrWhiteSpace(value) ? string.Empty : " ");
+            set => _sql = string.IsNullOrWhiteSpace(value) ? string.Empty : $"{value} ";
         }
 
         protected List<string> Statements;
@@ -27,7 +28,9 @@ namespace ElefontNETStandard
         protected DatabaseConnection Connection;
         protected NpgsqlDataReader Reader;
 
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public CSQL()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             Sql = string.Empty;
             Statements = new List<string>();
@@ -46,24 +49,42 @@ namespace ElefontNETStandard
 
             string wrap(string p) => $"'{p}'";
 
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8604 // Possible null reference argument.
+#pragma warning disable CS8603 // Possible null reference return.
+#pragma warning disable CS8605 // Unboxing a possibly null value.
             if (type == typeof(Int32))
                 return wrap(param.ToString());
+
             if (type == typeof(Double))
                 return wrap(param.ToString().Replace(",", "."));
+
             if (type == typeof(string))
             {
                 if (Statements.Contains(param.ToString()))
+                {
                     return param.ToString();
+                }
                 return wrap(param.ToString().Trim().Replace("'", "''"));
             }
+
             if (type == typeof(bool))
                 return wrap(param.ToString());
+
             if (type == typeof(DateTime))
-                return wrap(((DateTime)param).ToString(DB_DateFormat));
+                return wrap(((DateTime)param).ToString(UNI_DATEFORMAT));
+
+            if (type == typeof(DateTimeOffset))
+                return wrap(((DateTimeOffset)param).ToString());
+
             if (type == null)
                 return nullString;
+#pragma warning restore CS8604 // Possible null reference argument.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8603 // Possible null reference return.
+#pragma warning restore CS8605 // Unboxing a possibly null value.
 
-            throw new TypeNotFoundException();
+            throw new TypeNotFoundException($"Type {type} is not a supported type.");
         }
 
         /// <summary>
@@ -93,7 +114,11 @@ namespace ElefontNETStandard
             return sql;
         }
 
-        internal void PostToConnection(DatabaseConnection connection)
+        /// <summary>
+        /// Posts the query and keeps the connection opened.
+        /// </summary>
+        /// <param name="connection"></param>
+        public void OpenConnection(DatabaseConnection connection)
         {
             Sql += ";";
             Connection = connection;
@@ -107,7 +132,7 @@ namespace ElefontNETStandard
         /// <param name="connection"></param>
         public void Post(DatabaseConnection connection)
         {
-            PostToConnection(connection);
+            OpenConnection(connection);
             Close();
         }
 
@@ -118,7 +143,7 @@ namespace ElefontNETStandard
         /// <param name="action">Action with the query's response.</param>
         public void Post(DatabaseConnection connection, Action<CSQL> action)
         {
-            PostToConnection(connection);
+            OpenConnection(connection);
             while (Read())
             {
                 action.Invoke(this);
@@ -126,24 +151,24 @@ namespace ElefontNETStandard
             Close();
         }
 
-        internal bool Read()
+        public bool Read()
         {
             return Reader.Read();
         }
 
-        public async Task CloseAsync()
+        internal async Task CloseAsync()
         {
             Connection.Dispose();
             await Reader.DisposeAsync();
             Reader.Close();
         }
 
-        internal void Close()
+        public void Close()
         {
             CloseAsync().Wait();
         }
 
-        internal bool IsDBNull(int index)
+        public bool IsDBNull(int index)
         {
             if (Reader.IsDBNull(index))
                 return true;
@@ -154,7 +179,6 @@ namespace ElefontNETStandard
         {
             return Reader.GetInt32(index);
         }
-
         public int? GetNullableInt32(int index)
         {
             if (IsDBNull(index))
@@ -166,7 +190,6 @@ namespace ElefontNETStandard
         {
             return Reader.GetDouble(index);
         }
-
         public double? GetNullableDouble(int index)
         {
             if (IsDBNull(index))
@@ -174,7 +197,7 @@ namespace ElefontNETStandard
             return GetDouble(index);
         }
 
-        public string GetString(int index)
+        public string? GetString(int index)
         {
             if (IsDBNull(index))
                 return null;
@@ -185,7 +208,6 @@ namespace ElefontNETStandard
         {
             return Reader.GetBoolean(index);
         }
-
         public bool? GetNullableBoolean(int index)
         {
             if (IsDBNull(index))
@@ -199,12 +221,17 @@ namespace ElefontNETStandard
                 return new DateTime();
             return Reader.GetDateTime(index);
         }
-
         public DateTime? GetNullableDateTime(int index)
         {
             if (IsDBNull(index))
                 return null;
             return Reader.GetDateTime(index);
+        }
+
+        internal CSQL CREATE_TABLE(string table, string body, bool ifNotExists = false)
+        {
+            Sql += $"CREATE TABLE {(ifNotExists ? "IF NOT EXISTS " : null)}{table}({body});";
+            return this;
         }
 
         public CSQL DO()
@@ -215,12 +242,19 @@ namespace ElefontNETStandard
 
         public CSQL DECLARE(params string[] statements)
         {
-            QueryParameterModel param;
-            for (int i = 0; i < statements.Length; i++)
+            try
             {
-                param = new QueryParameterModel(i, statements[i]);
-                Sql += $"DECLARE {param.Parameter} {param.Type};";
-                Statements.Add(param.Parameter);
+                QueryParameterModel param;
+                for (int i = 0; i < statements.Length; i++)
+                {
+                    param = new QueryParameterModel(i, statements[i]);
+                    Sql += $"DECLARE {param.Parameter} {param.Type};";
+                    Statements.Add(param.Parameter);
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException($"{ex.Source}: A null statement has been declarated.", ex);
             }
             return this;
         }
@@ -291,7 +325,7 @@ namespace ElefontNETStandard
             return this;
         }
 
-        public CSQL INSERT_INTO(string table, string fields = null)
+        public CSQL INSERT_INTO(string table, string? fields = null)
         {
             Sql += $"INSERT INTO {table} ({fields}) ";
             return this;
@@ -348,6 +382,12 @@ namespace ElefontNETStandard
         public CSQL SEMICOLON()
         {
             Sql += ";";
+            return this;
+        }
+
+        public CSQL COMMA()
+        {
+            Sql += ",";
             return this;
         }
     }

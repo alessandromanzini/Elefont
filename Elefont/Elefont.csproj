@@ -3,8 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <Title>Elefont</Title>
+        <PackageIcon>icon.png</PackageIcon>
         <PackageId>alessandromanzini.Util.Elefont</PackageId>
-        <Version>2.0.0</Version>
+        <Version>2.1.0-alpha8</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
@@ -13,8 +14,6 @@
         <RepositoryUrl>https://github.com/alessandromanzini/Elefont</RepositoryUrl>
         <AssemblyName>Elefont</AssemblyName>
         <PackageReleaseNotes>
-            IQueryResponse interface implemented for Post callbacks.
-            No more looping to retrieve data from db's response.
         </PackageReleaseNotes>
     </PropertyGroup>
 
@@ -30,12 +29,19 @@
     <None Remove="Npgsql" />
     <None Remove="Models\" />
     <None Remove="Exceptions\" />
+    <None Remove="Assets\" />
+    <None Include="Assets\icon.png" Pack="true" PackagePath="\" />
+    <None Remove="Helpers\" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="6.0.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

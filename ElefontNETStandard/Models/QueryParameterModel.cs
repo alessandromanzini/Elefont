@@ -11,7 +11,7 @@ namespace ElefontNETStandard.Models
         {
             try
             {
-                var split = value?.Split(":");
+                var split = value.Split(":");
 
                 OrderId = orderId;
                 Parameter = split[0];
@@ -19,7 +19,11 @@ namespace ElefontNETStandard.Models
             }
             catch (IndexOutOfRangeException ex)
             {
-                throw new IndexOutOfRangeException($"{ex.Source}: Query parameters are missing information. Perhaps you forgot to specify parameter value or type.");
+                throw new IndexOutOfRangeException($"{ex.Source}: Query parameters are missing information. Perhaps you forgot to specify parameter value or type.", ex);
+            }
+            catch (NullReferenceException)
+            {
+                throw;
             }
         }
     }

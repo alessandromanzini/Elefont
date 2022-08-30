@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/ElefontNETStandard.csproj": {
-      "version": "2.0.0",
+      "version": "2.0.2",
       "restore": {
         "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/ElefontNETStandard.csproj",
         "projectName": "alessandromanzini.Util.ElefontNETStandard",
@@ -39,6 +39,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[6.0.6, )"

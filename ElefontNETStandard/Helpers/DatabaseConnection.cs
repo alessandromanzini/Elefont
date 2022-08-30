@@ -1,7 +1,7 @@
 ﻿using System;
 using Npgsql;
 
-namespace ElefontNETStandard
+namespace ElefontNETStandard.Helpers
 {
     /// <summary>
     /// Database connection to a npgsql db.

@@ -1,28 +1,34 @@
 ﻿<Properties>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/CSQL.cs">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.nexus_one_-_api_30" />
+  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/Elefont.csproj">
     <Files>
-      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="14" Column="9" />
-      <File FileName="Elefont/Elefont.csproj" Line="5" Column="11" />
-      <File FileName="ElefontNETStandard/CSQL.cs" Line="5" Column="25" />
-      <File FileName="Elefont/CSQL.cs" Line="42" Column="10" />
-      <File FileName="Elefont/IQueryResponse.cs" Line="4" Column="36" />
+      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="23" />
+      <File FileName="Elefont/Elefont.csproj" Line="10" Column="3" />
+      <File FileName="Elefont/CSQL.cs" Line="82" Column="26" />
+      <File FileName="Elefont/DatabasePrototyper.cs" Line="17" Column="9" />
+      <File FileName="Elefont/NoRelDatabasePrototyper.cs" Line="40" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Elefont" expanded="True">
             <Node name="Elefont" expanded="True">
+              <Node name="Assets" expanded="True" />
               <Node name="Exceptions" expanded="True" />
+              <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="CSQL.cs" selected="True" />
             </Node>
             <Node name="ElefontNETStandard" expanded="True">
+              <Node name="Assets" expanded="True" />
               <Node name="Exceptions" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Helpers" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -32,9 +38,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.nexus_one_-_api_30" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Debugger.DebugSourceFolders />
+  <MultiItemStartupConfigurations />
 </Properties>
