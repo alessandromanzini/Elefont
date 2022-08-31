@@ -140,15 +140,34 @@ namespace ElefontNETStandard
         /// Posts the query, invokes the action and closes the connection.
         /// </summary>
         /// <param name="connection"></param>
-        /// <param name="action">Action with the query's response.</param>
-        public void Post(DatabaseConnection connection, Action<CSQL> action)
+        /// <param name="querySelector">Action with the query's response.</param>
+        public void Post(DatabaseConnection connection, Action<CSQL> querySelector)
         {
             OpenConnection(connection);
             while (Read())
             {
-                action.Invoke(this);
+                querySelector.Invoke(this);
             }
             Close();
+        }
+
+        /// <summary>
+        /// Posts the query, invokes the function and closes the connection.
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="querySelector">Function with the query's response, it should return an element for the list.</param>
+        /// <returns>An IEnumerable containing each return on the the query response.</returns>
+        public IEnumerable<T> Post<T>(DatabaseConnection connection, Func<CSQL, T> querySelector)
+        {
+            var objects = new List<T>();
+            OpenConnection(connection);
+            while (Read())
+            {
+                objects.Add(querySelector.Invoke(this));
+            }
+            Close();
+
+            return objects;
         }
 
         public bool Read()
@@ -392,4 +411,3 @@ namespace ElefontNETStandard
         }
     }
 }
-

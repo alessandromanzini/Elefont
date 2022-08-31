@@ -17,6 +17,7 @@ namespace ElefontNETStandard
 
         private string GetTableName<T>() => $"NoRel{typeof(T).Name}";
 
+        public void PostObject<T>(T obj, Func<T, object> indexSelector) => PostObjects(new List<T> { obj }, indexSelector);
         public void PostObjects<T>(IEnumerable<T> objects, Func<T, object> indexSelector)
         {
             if (objects?.Any() ?? false)
@@ -36,11 +37,10 @@ namespace ElefontNETStandard
                     {
 #pragma warning disable CS8604 // Possible null reference argument.
                         csql.INSERT_INTO(table, "id, json")
-                            .VALUES(id.ToString(), Newtonsoft.Json.JsonConvert.SerializeObject(obj));
+                            .VALUES(id.ToString(), Newtonsoft.Json.JsonConvert.SerializeObject(obj)).SEMICOLON();
 #pragma warning restore CS8604 // Possible null reference argument.
                     }
                 }
-
                 csql.Post(Conn);
             }
         }
@@ -71,7 +71,7 @@ namespace ElefontNETStandard
         {
             string table = GetTableName<T>();
             new CSQL()
-                .UPDATE(table, "json = {0}", Newtonsoft.Json.JsonConvert.SerializeObject(obj))
+                .UPDATE(table, "id = {0}, json = {1}", id, Newtonsoft.Json.JsonConvert.SerializeObject(obj))
                 .WHERE("id = {0}", id)
                 .Post(Conn);
         }

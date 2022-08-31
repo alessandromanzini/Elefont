@@ -136,7 +136,7 @@
     "/Users/alessandromanzini/.nuget/packages/": {}
   },
   "project": {
-    "version": "2.1.0-alpha8",
+    "version": "2.1.0-alpha12",
     "restore": {
       "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
       "projectName": "alessandromanzini.Util.Elefont",

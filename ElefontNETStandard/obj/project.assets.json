@@ -563,7 +563,7 @@
     "/Users/alessandromanzini/.nuget/packages/": {}
   },
   "project": {
-    "version": "2.0.2",
+    "version": "2.1.0-alpha",
     "restore": {
       "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/ElefontNETStandard.csproj",
       "projectName": "alessandromanzini.Util.ElefontNETStandard",

@@ -18,6 +18,7 @@ namespace Elefont
         protected static CSQL UPDATE(string table, string sets, params object[] _params) => new CSQL().UPDATE(table, sets, _params);
         protected static CSQL INSERT_INTO(string table, string? fields = null) => new CSQL().INSERT_INTO(table, fields);
         protected static CSQL DELETE_FROM(string table) => new CSQL().DELETE_FROM(table);
+        protected static CSQL DO() => new CSQL().DO();
     }
 }
 
