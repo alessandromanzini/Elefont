@@ -6,10 +6,12 @@
   <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/Elefont.csproj">
     <Files>
-      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="16" Column="31" />
+      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="31" />
       <File FileName="Elefont/Elefont.csproj" Line="8" Column="31" />
       <File FileName="Elefont/NoRelDatabasePrototyper.cs" Line="71" Column="23" />
-      <File FileName="Elefont/DatabasePrototyper.cs" Line="15" Column="10" />
+      <File FileName="Elefont/DatabasePrototyper.cs" Line="8" Column="1" />
+      <File FileName="Elefont/CSQL.cs" Line="9" Column="5" />
+      <File FileName="ElefontNETStandard/CSQL.cs" Line="412" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

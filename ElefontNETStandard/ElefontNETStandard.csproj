@@ -4,7 +4,7 @@
         <Title>Elefont</Title>
         <PackageIcon>icon.png</PackageIcon>
         <PackageId>alessandromanzini.Util.ElefontNETStandard</PackageId>
-        <Version>2.1.0-alpha</Version>
+        <Version>2.1.0-alpha13</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
