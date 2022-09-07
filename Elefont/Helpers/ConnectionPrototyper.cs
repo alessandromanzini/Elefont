@@ -1,22 +1,21 @@
 ﻿using System;
+using Elefont.Exceptions;
+
 namespace Elefont.Helpers
 {
     public abstract class ConnectionPrototyper
     {
         protected int max_connections_count;
         protected int max_active_connections_count;
+
         protected string _connectionString;
         private DatabaseConnection[] _connections;
-        protected DatabaseConnection Conn
+        protected DatabaseConnection GetAvailableConnection()
         {
-            get
-            {
-                foreach (var connection in _connections)
-                    if (connection.IsNotQuering)
-                        return connection;
-
-                throw new Exception("All connections are being utilized.");
-            }
+            foreach(var conn in _connections)
+                if (conn.IsNotQuering)
+                    return conn;
+            throw new ConnectionException("Max connections count reached.");
         }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.

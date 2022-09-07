@@ -1,24 +1,33 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.nexus_one_-_api_30" />
+  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="Elefont/Elefont.csproj">
     <Files>
-      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="31" />
       <File FileName="Elefont/Elefont.csproj" Line="8" Column="31" />
-      <File FileName="Elefont/NoRelDatabasePrototyper.cs" Line="71" Column="23" />
-      <File FileName="Elefont/DatabasePrototyper.cs" Line="8" Column="1" />
-      <File FileName="Elefont/CSQL.cs" Line="9" Column="5" />
-      <File FileName="ElefontNETStandard/CSQL.cs" Line="412" Column="6" />
+      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="31" />
+      <File FileName="Elefont/NoRelDatabasePrototyper.cs" Line="13" Column="10" />
+      <File FileName="ElefontNETStandard/NoRelDatabasePrototyper.cs" Line="8" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Elefont" expanded="True">
-            <Node name="Elefont" expanded="True" />
-            <Node name="ElefontNETStandard" expanded="True" />
+            <Node name="Elefont" expanded="True">
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+            </Node>
+            <Node name="ElefontNETStandard" expanded="True">
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -27,8 +36,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

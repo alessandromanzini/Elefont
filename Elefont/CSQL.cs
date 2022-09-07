@@ -27,9 +27,10 @@ namespace Elefont
         protected NpgsqlDataReader Reader;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public CSQL()
+        public CSQL(DatabaseConnection connection)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
+            Connection = connection;
             Sql = string.Empty;
             Statements = new List<string>();
         }
@@ -116,32 +117,36 @@ namespace Elefont
         /// Posts the query and keeps the connection opened.
         /// </summary>
         /// <param name="connection"></param>
-        public void OpenConnection(DatabaseConnection connection)
+        public void OpenConnection()
         {
-            Sql += ";";
-            Connection = connection;
-            Connection.Post();
-            Reader = new NpgsqlCommand(Sql, connection.Connection).ExecuteReader();
+            try
+            {
+                Sql += ";";
+                Connection.Post();
+                Reader = new NpgsqlCommand(Sql, Connection.Connection).ExecuteReader();
+            }
+            catch(NullReferenceException ex)
+            {
+                throw new NullReferenceException("You must provide a connection to post the query.", ex);
+            }
         }
 
         /// <summary>
         /// Posts the query and closes the connection.
         /// </summary>
-        /// <param name="connection"></param>
-        public void Post(DatabaseConnection connection)
+        public void Post()
         {
-            OpenConnection(connection);
+            OpenConnection();
             Close();
         }
 
         /// <summary>
         /// Posts the query, invokes the action and closes the connection.
         /// </summary>
-        /// <param name="connection"></param>
         /// <param name="querySelector">Action with the query's response.</param>
-        public void Post(DatabaseConnection connection, Action<CSQL> querySelector)
+        public void Post(Action<CSQL> querySelector)
         {
-            OpenConnection(connection);
+            OpenConnection();
             while (Read())
             {
                 querySelector.Invoke(this);
@@ -152,13 +157,12 @@ namespace Elefont
         /// <summary>
         /// Posts the query, invokes the function and closes the connection.
         /// </summary>
-        /// <param name="connection"></param>
         /// <param name="querySelector">Function with the query's response, it should return an element for the list.</param>
         /// <returns>An IEnumerable containing each return on the the query response.</returns>
-        public IEnumerable<T> Post<T>(DatabaseConnection connection, Func<CSQL, T> querySelector)
+        public IEnumerable<T> Post<T>(Func<CSQL, T> querySelector)
         {
             var objects = new List<T>();
-            OpenConnection(connection);
+            OpenConnection();
             while (Read())
             {
                 objects.Add(querySelector.Invoke(this));

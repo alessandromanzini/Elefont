@@ -15,10 +15,10 @@ namespace ElefontNETStandard
         {
         }
 
-        protected static CSQL SELECT(string sql) => new CSQL().SELECT(sql);
-        protected static CSQL UPDATE(string table, string sets, params object[] _params) => new CSQL().UPDATE(table, sets, _params);
-        protected static CSQL INSERT_INTO(string table, string? fields = null) => new CSQL().INSERT_INTO(table, fields);
-        protected static CSQL DELETE_FROM(string table) => new CSQL().DELETE_FROM(table);
-        protected static CSQL DO() => new CSQL().DO();
+        protected CSQL SELECT(string sql) => new CSQL(GetAvailableConnection()).SELECT(sql);
+        protected CSQL UPDATE(string table, string sets, params object[] _params) => new CSQL(GetAvailableConnection()).UPDATE(table, sets, _params);
+        protected CSQL INSERT_INTO(string table, string? fields = null) => new CSQL(GetAvailableConnection()).INSERT_INTO(table, fields);
+        protected CSQL DELETE_FROM(string table) => new CSQL(GetAvailableConnection()).DELETE_FROM(table);
+        protected CSQL DO() => new CSQL(GetAvailableConnection()).DO();
     }
 }

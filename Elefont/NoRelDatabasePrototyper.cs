@@ -3,7 +3,7 @@ using Elefont.Helpers;
 
 namespace Elefont
 {
-    public class NoRelDatabasePrototyper : ConnectionPrototyper
+    internal class NoRelDatabasePrototyper : ConnectionPrototyper
     {
         public NoRelDatabasePrototyper(int max_conn, int max_act, string uri) : base(max_conn, max_act, uri)
         {
@@ -21,7 +21,7 @@ namespace Elefont
             if (objects?.Any() ?? false)
             {
                 string table = GetTableName<T>();
-                var csql = new CSQL()
+                var csql = new CSQL(GetAvailableConnection())
                     .CREATE_TABLE(table, "id VARCHAR(255) PRIMARY KEY, json VARCHAR(255)", true);     
 
                 foreach(var obj in objects)
@@ -39,7 +39,7 @@ namespace Elefont
 #pragma warning restore CS8604 // Possible null reference argument.
                     }
                 }
-                csql.Post(Conn);
+                csql.Post();
             }
         }
 
@@ -48,10 +48,10 @@ namespace Elefont
             string table = GetTableName<T>();
             List<T> objects = new List<T>();
 
-            new CSQL()
+            new CSQL(GetAvailableConnection())
                 .SELECT("json")
                 .FROM(table)
-                .Post(Conn, (query) =>
+                .Post((query) =>
                 {
 #pragma warning disable CS8604 // Possible null reference argument.
                     objects.Add(Newtonsoft.Json.JsonConvert.DeserializeObject<T>(query.GetString(0)));
@@ -68,19 +68,19 @@ namespace Elefont
         public void UpdateObject<T>(object id, T obj)
         {
             string table = GetTableName<T>();
-            new CSQL()
+            new CSQL(GetAvailableConnection())
                 .UPDATE(table, "id = {0}, json = {1}", id, Newtonsoft.Json.JsonConvert.SerializeObject(obj))
                 .WHERE("id = {0}", id)
-                .Post(Conn);
+                .Post();
         }
 
         public void DeleteObject<T>(object id)
         {
             string table = GetTableName<T>();
-            new CSQL()
+            new CSQL(GetAvailableConnection())
                 .DELETE_FROM(table)
                 .WHERE("id = {0}", id)
-                .Post(Conn);
+                .Post();
         }
     }
 }

@@ -5,7 +5,7 @@
   },
   "projects": {
     "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj": {
-      "version": "2.1.0-alpha12",
+      "version": "2.1.0",
       "restore": {
         "projectUniqueName": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/Elefont/Elefont.csproj",
         "projectName": "alessandromanzini.Util.Elefont",

@@ -4,9 +4,9 @@ using Npgsql;
 namespace ElefontNETStandard.Helpers
 {
     /// <summary>
-    /// Database connection to a npgsql db.
+    /// Database connection to a postgress db.
     /// </summary>
-    public class DatabaseConnection : IDisposable
+    public class DatabaseConnection
     {
         public readonly NpgsqlConnection Connection;
 
@@ -32,7 +32,9 @@ namespace ElefontNETStandard.Helpers
         {
             _isQuering = true;
             if (Connection.State != System.Data.ConnectionState.Open)
+            {
                 Connection.Open();
+            }
         }
 
         /// <summary>
@@ -41,11 +43,9 @@ namespace ElefontNETStandard.Helpers
         public void Dispose()
         {
             _isQuering = false;
-
             if (!KeepActive)
             {
                 Connection.Close();
-                GC.SuppressFinalize(this);
             }
         }
     }
