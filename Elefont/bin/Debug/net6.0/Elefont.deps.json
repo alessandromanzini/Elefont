@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Elefont/2.1.1-alpha": {
+      "Elefont/2.1.1-alpha2": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "Npgsql": "6.0.7"
@@ -38,7 +38,7 @@
     }
   },
   "libraries": {
-    "Elefont/2.1.1-alpha": {
+    "Elefont/2.1.1-alpha2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

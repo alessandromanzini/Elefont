@@ -1,10 +1,15 @@
 ﻿<Properties>
+  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.nexus_one_-_api_30" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="ElefontNETStandard/ElefontNETStandard.csproj">
     <Files>
-      <File FileName="Elefont/Elefont.csproj" Line="8" Column="23" />
-      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="29" />
-      <File FileName="Elefont/Helpers/ConnectionPrototyper.cs" Line="19" Column="8" />
-      <File FileName="ElefontNETStandard/Helpers/ConnectionPrototyper.cs" Line="23" Column="40" />
+      <File FileName="Elefont/Elefont.csproj" Line="8" Column="30" />
+      <File FileName="ElefontNETStandard/ElefontNETStandard.csproj" Line="7" Column="30" />
+      <File FileName="Elefont/CSQL.cs" Line="168" Column="58" />
+      <File FileName="ElefontNETStandard/CSQL.cs" Line="170" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,13 +29,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.nexus_one_-_api_30" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <Debugger.DebugSourceFolders />
-  <AuthorInfo Name="alessandromanzini" Email="" Copyright="" Company="Manzini&amp;CoDal1938Srl" Trademark="" />
 </Properties>

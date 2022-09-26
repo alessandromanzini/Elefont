@@ -11,7 +11,7 @@ namespace ElefontNETStandard
     /// <summary>
     /// Class that helps formulating a query and posting it to a Npgsql connection.
     /// </summary>
-    public class CSQL
+    public class CSQL : IQueryResponse
     {
         public static readonly string UNI_DATEFORMAT = "yyyy-MM-dd";
         public static readonly string NULL_VALUE = "NULL";
@@ -137,7 +137,7 @@ namespace ElefontNETStandard
         public void Post(DatabaseConnection connection) => Post();
 
         [Obsolete("You can remove the 'connection' parameter.")]
-        public void Post(DatabaseConnection connection, Action<CSQL> querySelector) => Post(querySelector);
+        public void Post(DatabaseConnection connection, Action<IQueryResponse> querySelector) => Post(querySelector);
 
         /// <summary>
         /// Posts the query and closes the connection.
@@ -152,7 +152,7 @@ namespace ElefontNETStandard
         /// Posts the query, invokes the action and closes the connection.
         /// </summary>
         /// <param name="querySelector">Action with the query's response.</param>
-        public void Post(Action<CSQL> querySelector)
+        public void Post(Action<IQueryResponse> querySelector)
         {
             OpenConnection();
             while (Read())
@@ -167,7 +167,7 @@ namespace ElefontNETStandard
         /// </summary>
         /// <param name="querySelector">Function with the query's response, it should return an element for the list.</param>
         /// <returns>An IEnumerable containing each return on the the query response.</returns>
-        public IEnumerable<T> Post<T>(Func<CSQL, T> querySelector)
+        public IEnumerable<T> Post<T>(Func<IQueryResponse, T> querySelector)
         {
             var objects = new List<T>();
             OpenConnection();

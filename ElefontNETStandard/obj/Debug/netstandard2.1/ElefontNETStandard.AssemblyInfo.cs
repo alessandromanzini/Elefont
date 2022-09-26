@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A library to help with PostgreSQL development in C#")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.1-alpha")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.1-alpha2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElefontNETStandard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElefontNETStandard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.1.1.0")]
