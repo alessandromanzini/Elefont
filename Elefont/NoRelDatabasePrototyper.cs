@@ -21,7 +21,7 @@ namespace Elefont
             if (objects?.Any() ?? false)
             {
                 string table = GetTableName<T>();
-                var csql = new CSQL(GetAvailableConnection())
+                var csql = new CSQL(GetAvailableConnectionAsync())
                     .CREATE_TABLE(table, "id VARCHAR(255) PRIMARY KEY, json VARCHAR(255)", true);     
 
                 foreach(var obj in objects)
@@ -48,7 +48,7 @@ namespace Elefont
             string table = GetTableName<T>();
             List<T> objects = new List<T>();
 
-            new CSQL(GetAvailableConnection())
+            new CSQL(GetAvailableConnectionAsync())
                 .SELECT("json")
                 .FROM(table)
                 .Post((query) =>
@@ -68,7 +68,7 @@ namespace Elefont
         public void UpdateObject<T>(object id, T obj)
         {
             string table = GetTableName<T>();
-            new CSQL(GetAvailableConnection())
+            new CSQL(GetAvailableConnectionAsync())
                 .UPDATE(table, "id = {0}, json = {1}", id, Newtonsoft.Json.JsonConvert.SerializeObject(obj))
                 .WHERE("id = {0}", id)
                 .Post();
@@ -77,7 +77,7 @@ namespace Elefont
         public void DeleteObject<T>(object id)
         {
             string table = GetTableName<T>();
-            new CSQL(GetAvailableConnection())
+            new CSQL(GetAvailableConnectionAsync())
                 .DELETE_FROM(table)
                 .WHERE("id = {0}", id)
                 .Post();

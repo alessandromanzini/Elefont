@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xlvBIWMlQoNNhSORsXy8TvS8ZZ9BXz+G7bfCQz+UraO8kEIyNe649nIqErP3HQx8GOt74QzbG+perGxs4i6ZIA==",
+  "dgSpecHash": "Jm2IKLq03Y6ekur+up0RQgczGYY0a2sYs5anILG1EKOHKVMEMIioJiPMM5YT/qV8FCCuHpMpxxsWccsVs0FDrQ==",
   "success": true,
   "projectFilePath": "/Users/alessandromanzini/Projects/dotnet/library/Elefont/ElefontNETStandard/ElefontNETStandard.csproj",
   "expectedPackageFiles": [
     "/Users/alessandromanzini/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/alessandromanzini/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/alessandromanzini/.nuget/packages/npgsql/6.0.6/npgsql.6.0.6.nupkg.sha512",
+    "/Users/alessandromanzini/.nuget/packages/npgsql/6.0.7/npgsql.6.0.7.nupkg.sha512",
     "/Users/alessandromanzini/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/alessandromanzini/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/alessandromanzini/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

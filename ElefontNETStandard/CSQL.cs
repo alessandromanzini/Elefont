@@ -133,6 +133,12 @@ namespace ElefontNETStandard
             }
         }
 
+        [Obsolete("You can remove the 'connection' parameter.")]
+        public void Post(DatabaseConnection connection) => Post();
+
+        [Obsolete("You can remove the 'connection' parameter.")]
+        public void Post(DatabaseConnection connection, Action<CSQL> querySelector) => Post(querySelector);
+
         /// <summary>
         /// Posts the query and closes the connection.
         /// </summary>

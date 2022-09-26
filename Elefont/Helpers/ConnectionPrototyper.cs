@@ -10,11 +10,17 @@ namespace Elefont.Helpers
 
         protected string _connectionString;
         private DatabaseConnection[] _connections;
-        protected DatabaseConnection GetAvailableConnection()
+        protected async Task<DatabaseConnection> GetAvailableConnectionAsync()
         {
-            foreach(var conn in _connections)
-                if (conn.IsNotQuering)
-                    return conn;
+            const int max_attempts = 5;
+            int attempts_count = 0;
+            while(attempts_count <= max_attempts)
+            {
+                foreach(var conn in _connections)
+                    if (conn.IsNotQuering)
+                        return conn;
+                await Task.Delay(1000);
+            }
             throw new ConnectionException("Max connections count reached.");
         }
 

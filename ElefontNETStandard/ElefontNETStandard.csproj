@@ -4,7 +4,7 @@
         <Title>Elefont</Title>
         <PackageIcon>icon.png</PackageIcon>
         <PackageId>alessandromanzini.Util.ElefontNETStandard</PackageId>
-        <Version>2.1.0</Version>
+        <Version>2.1.1-alpha</Version>
         <Authors>alessandromanzini</Authors>
         <Company>Manzini Dal 1938 Srl</Company>
         <Description>A library to help with PostgreSQL development in C#</Description>
@@ -32,7 +32,7 @@
       <Folder Include="Helpers\" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="Npgsql" Version="6.0.6" />
+      <PackageReference Include="Npgsql" Version="6.0.7" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 </Project>
