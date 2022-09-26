@@ -7,10 +7,10 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "ElefontNETStandard/2.1.0": {
+      "ElefontNETStandard/2.1.1-alpha": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "Npgsql": "6.0.6"
+          "Npgsql": "6.0.7"
         },
         "runtime": {
           "ElefontNETStandard.dll": {}
@@ -32,7 +32,7 @@
           }
         }
       },
-      "Npgsql/6.0.6": {
+      "Npgsql/6.0.7": {
         "dependencies": {
           "System.Collections.Immutable": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.0",
@@ -42,8 +42,8 @@
         },
         "runtime": {
           "lib/netstandard2.1/Npgsql.dll": {
-            "assemblyVersion": "6.0.6.0",
-            "fileVersion": "6.0.6.0"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.7.0"
           }
         }
       },
@@ -160,7 +160,7 @@
     }
   },
   "libraries": {
-    "ElefontNETStandard/2.1.0": {
+    "ElefontNETStandard/2.1.1-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -179,12 +179,12 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "Npgsql/6.0.6": {
+    "Npgsql/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IIwnoJp0sFkhAydT/KKe/0NhlJKhYPIrXSE95AuU/2dqHNI9alxvjClJSGL+QE8NGqq1SFn+NenxVtm/JYsrJg==",
-      "path": "npgsql/6.0.6",
-      "hashPath": "npgsql.6.0.6.nupkg.sha512"
+      "sha512": "sha512-HhD5q/VUJY++tCzc0eCrhtsxmUdP7NxNhUMOdYW6sqpC6NRlFLvUDf5JyRj0gOGkXe3Tn49toaisgvLqlzQ2JQ==",
+      "path": "npgsql/6.0.7",
+      "hashPath": "npgsql.6.0.7.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
