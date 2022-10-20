@@ -17,10 +17,10 @@ namespace ElefontNETStandard
         public static readonly string NULL_VALUE = "NULL";
         public static readonly string DEFAULT_VALUE = "default";
         private string _sql;
-        protected string Sql
+        public string Sql
         {
             get => _sql;
-            set => _sql = string.IsNullOrWhiteSpace(value) ? string.Empty : $"{value} ";
+            protected set => _sql = string.IsNullOrWhiteSpace(value) ? string.Empty : $"{value} ";
         }
 
         protected List<string> Statements;
@@ -133,10 +133,10 @@ namespace ElefontNETStandard
             }
         }
 
-        [Obsolete("You can remove the 'connection' parameter.")]
+        [Obsolete("'connection' parameter is no longer required.")]
         public void Post(DatabaseConnection connection) => Post();
 
-        [Obsolete("You can remove the 'connection' parameter.")]
+        [Obsolete("'connection' parameter is no longer required.")]
         public void Post(DatabaseConnection connection, Action<IQueryResponse> querySelector) => Post(querySelector);
 
         /// <summary>
@@ -318,6 +318,12 @@ namespace ElefontNETStandard
 
         public CSQL RIGHT_JOIN(string table, string condition) => JOIN_BASE("RIGHT JOIN", table, condition);
 
+        public CSQL CROSS_JOIN(string table)
+        {
+            Sql += $"CROSS JOIN {table}";
+            return this;
+        }
+
         public CSQL SELECT(string sql)
         {
             Sql += $"SELECT {sql}";
@@ -387,6 +393,18 @@ namespace ElefontNETStandard
         public CSQL DEFINED_VALUES(string sql, params object[] _params)
         {
             Sql += $"VALUES({ReplaceParameters(sql, _params)}) ";
+            return this;
+        }
+
+        public CSQL GROUP_BY(string sql)
+        {
+            Sql += $"GROUP BY ({sql})";
+            return this;
+        }
+
+        public CSQL GROUP_BY_ROLLUP(string sql)
+        {
+            Sql += $"GROUP BY ROLLUP ({sql})";
             return this;
         }
 

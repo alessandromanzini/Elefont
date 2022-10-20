@@ -11,7 +11,7 @@ namespace ElefontNETStandard
         double GetDouble(int index);
         double? GetNullableDouble(int index);
 
-        string GetString(int index);
+        string? GetString(int index);
 
         bool GetBoolean(int index);
         bool? GetNullableBoolean(int index);
